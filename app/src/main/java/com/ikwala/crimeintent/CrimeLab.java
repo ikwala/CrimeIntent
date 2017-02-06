@@ -28,6 +28,17 @@ public class CrimeLab
         }
     }
 
+    public static CrimeLab get(Context context)
+    {
+        if (crimeLab == null)
+        {
+            crimeLab = new CrimeLab(context);
+        }
+
+        return crimeLab;
+
+    }
+
     public List<Crime> getCrimeList()
     {
         return crimeList;
