@@ -19,7 +19,7 @@ public class CrimeListActivity extends AppCompatActivity
 
         if (fragment == null)
         {
-            fragment = new CrimeFragment();
+            fragment = new CrimeListFragment();
             fm.beginTransaction().add(R.id.fragment_container,fragment).commit();
         }
     }
