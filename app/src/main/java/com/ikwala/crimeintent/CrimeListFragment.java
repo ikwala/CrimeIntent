@@ -38,13 +38,14 @@ public class CrimeListFragment extends Fragment
         rvCrimeList.setLayoutManager(new LinearLayoutManager(getActivity()));
         List<Crime> crimeList = CrimeLab.get(getActivity()).getCrimeList();
         crimeAdaptor = new CrimeAdaptor(crimeList);
+        rvCrimeList.setAdapter(crimeAdaptor);
 
         return v;
     }
 
     private class CrimeHolder extends RecyclerView.ViewHolder
     {
-        private Crime crime;
+        Crime crime;
         private TextView tvCrimeTitle;
         private TextView tvCrimeDate;
 
